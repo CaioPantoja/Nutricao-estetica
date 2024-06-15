@@ -51,7 +51,7 @@ const displaySlides = () => {
                 </div>
             `;
             sliderContainer.style.opacity = 1;
-        }, 600); 
+        }, 800); 
     }
 }
 
