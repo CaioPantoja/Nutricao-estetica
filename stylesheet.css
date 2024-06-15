@@ -1,11 +1,14 @@
-*{
-  box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
-body{
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: cadetblue;
+  font-family: 'Lato';
+}
+
+body {
+  background-color: rgb(53, 83, 95);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,13 +17,92 @@ body{
 
 .container {
   padding: 10px;
-  background-color: antiquewhite;
+  background-color: rgb(236, 236, 235);
   width: 80%;
   max-width: 818px;
   height: 80vh;
-  overflow: hidden;
-  cursor: grab;
+  overflow: visible;
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0 , 0 , 0 , 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.container .slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 86%;
+  margin: auto;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+
+.container .slider .profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.container .slider p {
+  color: #6b6767;
+  text-align: justify;
+  margin: 50px;
+  font-size: 15px;
+}
+
+.container .slider h3 {
+  font-size: 20px;
+  color: #5a5959;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.container .slider img {
+  width: 70%;
+  max-width: 300%;
+  height: auto;
+  border-radius: 15px;
+  margin: 50px;
+}
+
+.container button {
+  font-size: 25px;
+  height: 50px;
+  width: 50px;
+  background-color: aliceblue;
+  border: none;
+  position: absolute;
+  color: rgb(53, 83, 95);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.container button#next {
+  right: -26px;
+}
+
+.container button#prev {
+  left: -26px;
+}
+
+@media screen and (max-width: 720px) {
   
+  .container {
+    height: 600px;
+  }
+  .container .slider {
+    flex-direction: column;
+  }
+  .container .slider p{
+    font-size: 15px;
+  }
+  .container .slider img {
+    max-width: 100%;
+  }
 }

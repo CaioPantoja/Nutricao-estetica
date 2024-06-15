@@ -1,31 +1,68 @@
-const sliderContainer = document.querySelector(".container");
-const innerSlider = document.querySelector(".slider");
-const images = [""]
-
-const events = {
-    mouse: {
-        down: "mousedown" , move: "mousemove", up: "mouseup"
+const slides = [
+    {
+        image: "assets/nutri-1.png",
+        name: "Nutricao estetica",
+        info: "awedcwa awcdawdca acdwcwda dcawdacd dawcdawdcac dcawdcadaw cadawcadawc adcawdcadcawd adbawdbab adbawdbawd awbadba abdwabda abdwa abyr utbu btuw vruybn bubrt rv ybrv rbybryb"
     },
-    Touch: {
-        down: "touchstart", move: "touchmove", up: "touchend"
+    {
+        image: "assets/nutri-2.png",
+        name: "celulites e estrias",
+        info: "awedcwa awcdawdca acdwcwda dcawdacd dawcdawdcac dcawdcadaw cadawcadawc adcawdcadcawd adbawdbab adbawdbawd awbadba abdwabda abdwa abyr utbu btuw vruybn bubrt rv ybrv rbybryb"
+    },
+    {
+        image: "assets/nutri-3.png",
+        name: "Cabelo e unhas",
+        info: "awedcwa awcdawdca acdwcwda dcawdacd dawcdawdcac dcawdcadaw cadawcadawc adcawdcadcawd adbawdbab adbawdbawd awbadba abdwabda abdwa abyr utbu btuw vruybn bubrt rv ybrv rbybryb"
+    },
+    {
+        image: "assets/nutri-4.png",
+        name: "pele",
+        info: "awedcwa awcdawdca acdwcwda dcawdacd dawcdawdcac dcawdcadaw cadawcadawc adcawdcadcawd adbawdbab adbawdbawd awbadba abdwabda abdwa abyr utbu btuw vruybn bubrt rv ybrv rbybryb"
+    },
+    {
+        image: "assets/nutri-5.png",
+        name: "composicao corporal",
+        info: "awedcwa awcdawdca acdwcwda dcawdacd dawcdawdcac dcawdcadaw cadawcadawc adcawdcadcawd adbawdbab adbawdbawd awbadba abdwabda abdwa abyr utbu btuw vruybn bubrt rv ybrv rbybryb"
+    },
+    {
+        image: "assets/nutri-6.png",
+        name: "envelhecimento",
+        info: "awedcwa awcdawdca acdwcwda dcawdacd dawcdawdcac dcawdcadaw cadawcadawc adcawdcadcawd adbawdbab adbawdbawd awbadba abdwabda abdwa abyr utbu btuw vruybn bubrt rv ybrv rbybryb"
     }
-};
+];
 
-let deviceType = '';
+const sliderContainer = document.querySelector(".slider");
+const nextBtn = document.getElementById("next");
+const prevBtn = document.getElementById("prev");
 
-function isTouchDevice(){
-    try{
-        document.createEvent("TouchEvent");
-        deviceType = "touch";
-        return true;
-    }catch (e){
-        deviceType = "mouse";
-        return false;
+let currentSlideIndex = 0;
+const totalSlides = slides.length;
+
+const displaySlides = () => {
+    if (sliderContainer && nextBtn && prevBtn) {
+        sliderContainer.style.opacity = 0;
+        setTimeout(() => {
+            const { image, name, info } = slides[currentSlideIndex];
+            sliderContainer.innerHTML = `
+                <div class="profile">
+                    <img src="${image}" alt="${name}">
+                    <h3>${name}</h3>
+                    <p>${info}</p>
+                </div>
+            `;
+            sliderContainer.style.opacity = 1;
+        }, 600); 
     }
 }
 
-function slideGenerator(){
-    images.forEach(
-        
-    )
-}
+nextBtn.addEventListener("click", () => {
+    currentSlideIndex = (currentSlideIndex + 1) % totalSlides;
+    displaySlides();
+})
+
+prevBtn.addEventListener("click", () => {
+    currentSlideIndex = (currentSlideIndex - 1 + totalSlides) % totalSlides;
+    displaySlides();
+});
+
+window.onload = displaySlides;
