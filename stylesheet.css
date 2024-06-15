@@ -8,18 +8,29 @@
 }
 
 body {
-  background-color: rgb(53, 83, 95);
+  background-color: rgb(240, 240, 240);
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  flex-direction: column;
 }
 
+#Logo {
+  width: 50%;
+  height: auto;
+  max-width: 500px;
+}
+#Autor {
+  font-size: 15px;
+  color: rgb(53, 83, 95);
+  margin: 10px;
+}
 .container {
   padding: 10px;
-  background-color: rgb(236, 236, 235);
+  background-color: rgb(53, 83, 95);
   width: 80%;
-  max-width: 818px;
+  max-width: 718px;
   height: 80vh;
   overflow: visible;
   border-radius: 10px;
@@ -49,7 +60,7 @@ body {
 }
 
 .container .slider p {
-  color: #6b6767;
+  color: rgb(240, 240, 240);
   text-align: justify;
   margin: 50px;
   font-size: 15px;
@@ -57,7 +68,7 @@ body {
 
 .container .slider h3 {
   font-size: 20px;
-  color: #5a5959;
+  color: rgb(240, 240, 240);
   margin-bottom: 5px;
   text-align: center;
 }
@@ -74,7 +85,7 @@ body {
   font-size: 25px;
   height: 50px;
   width: 50px;
-  background-color: aliceblue;
+  background-color: rgb(240, 240, 240);
   border: none;
   position: absolute;
   color: rgb(53, 83, 95);
