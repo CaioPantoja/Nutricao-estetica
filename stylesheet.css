@@ -105,7 +105,7 @@ body {
 
 @media screen and (max-width: 720px) {
   .container {
-    height: 600px;
+    height: auto;
   }
 
   .container .slider {
@@ -113,7 +113,7 @@ body {
   }
 
   .container .slider p {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .container .slider img {
