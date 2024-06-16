@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Lato';
+  font-family: "Lato";
 }
 
 body {
@@ -21,11 +21,13 @@ body {
   height: auto;
   max-width: 500px;
 }
+
 #Autor {
   font-size: 15px;
   color: rgb(53, 83, 95);
   margin: 10px;
 }
+
 .container {
   padding: 10px;
   background-color: rgb(53, 83, 95);
@@ -62,14 +64,13 @@ body {
 .container .slider p {
   color: rgb(240, 240, 240);
   text-align: justify;
-  margin: 50px;
+  margin: 20px;
   font-size: 15px;
 }
 
 .container .slider h3 {
   font-size: 20px;
   color: rgb(240, 240, 240);
-  margin-bottom: 5px;
   text-align: center;
 }
 
@@ -78,7 +79,7 @@ body {
   max-width: 300%;
   height: auto;
   border-radius: 15px;
-  margin: 50px;
+  margin: 30px;
 }
 
 .container button {
@@ -103,16 +104,18 @@ body {
 }
 
 @media screen and (max-width: 720px) {
-  
   .container {
     height: 600px;
   }
+
   .container .slider {
     flex-direction: column;
   }
-  .container .slider p{
-    font-size: 15px;
+
+  .container .slider p {
+    font-size: 14px;
   }
+
   .container .slider img {
     max-width: 100%;
   }
